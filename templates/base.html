@@ -11,9 +11,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+    <link href="font-awesome/icons.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
@@ -36,16 +37,15 @@
 
 
 
-    <section class="section">
-        <div class="container">
-            {% block content %} {% endblock content %}
-        </div>
-    </section>
+    <main class="flex-grow-1 mt-4">
+        {% block content %} {% endblock content %}
+    </main>
 
     <footer class="bg-body-tertiary text-center py-4 mt-5 border-top">
         <div class="container">
             Built with <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a>
-            &amp; <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>.
+            &amp; <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>. Icons are from <a
+                href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome Free</a>.
         </div>
     </footer>
 </body>

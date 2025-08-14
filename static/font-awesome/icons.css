@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "fa-brands";
+    font-style: normal;
+    font-weight: 800;
+    font-display: block;
+    src: url("assets/fa-brands-400.woff2");
+}
+
+@font-face {
+    font-family: "fa-solid";
+    font-style: normal;
+    font-weight: 800;
+    font-display: block;
+    src: url("assets/fa-solid-900.woff2");
+}
+
+.fa-orcid {
+    font-family: "fa-brands";
+    font-style: normal;
+    font-weight: 800;
+}
+
+.fa-orcid::before {
+    content: "\f8d2";
+}
+
+.fa-google-scholar {
+    font-family: "fa-brands";
+    font-style: normal;
+    font-weight: 400;
+}
+
+.fa-google-scholar::before {
+    content: "\e63b";
+}
+
+.fa-github {
+    font-family: "fa-brands";
+    font-style: normal;
+    font-weight: 400;
+}
+
+.fa-github::before {
+    content: "\f09b";
+}
+
+.fa-linkedin {
+    font-family: "fa-brands";
+    font-style: normal;
+    font-weight: 400;
+}
+
+.fa-linkedin::before {
+    content: "\f08c";
+}
+
+.fa-enveloppe {
+    font-family: "fa-solid";
+    font-style: normal;
+    font-weight: 400;
+}
+
+.fa-enveloppe::before {
+    content: "\f0e0";
+}
+
+.fa-2x {
+    font-size: 1.5em;
+}
+
+.icon-hover {
+    color: #4a4e69;
+}
+
+.icon-hover:hover {
+    font-size: 2em;
+    color: #22223b;
+}
