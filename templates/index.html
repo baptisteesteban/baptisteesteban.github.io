@@ -11,7 +11,23 @@
 
                 {{ section.content | safe }}
 
+                <br>
 
+                {% if section.extra.keywords and section.extra.keywords | length > 0 %}
+                <p>
+                    {% if section.extra.keywords | length == 1 %}
+                    <strong>Keyword:</strong>
+                    {% else %}
+                    <strong>Keywords:</strong>
+                    {% endif %}
+                    &emsp;
+                    {% for kw in section.extra.keywords %}
+                    <a class="badge text-bg-primary" style="text-decoration: none;" href="{{kw.url}}">
+                        {{ kw.title }}
+                    </a>
+                    {% endfor %}
+                </p>
+                {% endif %}
             </div>
         </div>
     </div>

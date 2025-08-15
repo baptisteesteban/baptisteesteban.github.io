@@ -1,6 +1,16 @@
 +++
 title = "Home"
 template = "index.html"
+
+[extra]
+keywords = [
+    { title = "Mathematical Morphology", url = "https://en.wikipedia.org/wiki/Mathematical_morphology" },
+    { title = "Hierarchical Representations of Images", url = "https://people.irisa.fr/Sebastien.Lefevre/publis/joi2018.pdf" },
+    { title = "Generic Programming", url = "https://en.wikipedia.org/wiki/Generic_programming" },
+    { title = "C++ language", url = "https://en.wikipedia.org/wiki/C%2B%2B" },
+    { title = "Python language", url = "https://www.python.org/" },
+    { title = "Medical Imaging", url = "https://en.wikipedia.org/wiki/Medical_imaging" }
+]
 +++
 
 <br>
@@ -35,42 +45,3 @@ Verna](https://www.lre.epita.fr/perso/didier-verna). After my thesis, from
 November 2023 to August 2025, I worked at [Spimed-AI](https://www.spimed-ai.com)
 on automatic Coronary Artery Dicease (CAD) diagnosis from Coronary CT
 Angiography (CCTA).
-
-<p><strong>Keywords:</strong> &emsp;
-<a  class="badge text-bg-primary"
-    style="text-decoration: none;"
-    href="https://en.wikipedia.org/wiki/Mathematical_morphology"
->
-    Mathematical Morphology
-</a>
-<a  class="badge text-bg-primary"
-    style="text-decoration: none;"
-    href="https://people.irisa.fr/Sebastien.Lefevre/publis/joi2018.pdf"
->
-    Hierarchical Representations of Images
-</a>
-<a  class="badge text-bg-primary"
-    style="text-decoration: none;"
-    href="https://en.wikipedia.org/wiki/Generic_programming"
->
-    Generic Programming
-</a>
-<a  class="badge text-bg-primary"
-    style="text-decoration: none;"
-    href="https://en.wikipedia.org/wiki/C%2B%2B"
->
-    C++ language
-</a>
-<a  class="badge text-bg-primary"
-    style="text-decoration: none;"
-    href="https://www.python.org/"
->
-    Python language
-</a>
-<a  class="badge text-bg-primary"
-    style="text-decoration: none;"
-    href="https://en.wikipedia.org/wiki/Medical_imaging"
->
-    Medical Imaging
-</a>
-</p>
