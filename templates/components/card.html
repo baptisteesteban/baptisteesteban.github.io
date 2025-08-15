@@ -4,33 +4,49 @@
             text-decoration: none;
         }
     </style>
-    <img src="baptiste_esteban_photo.png" class="card-img-top">
+    <img src="{{ config.extra.card.picture_path }}" class="card-img-top">
     <div class="card-body text-center">
-        <h5 class="card-title">Baptiste Esteban, PhD</h5>
-        <p class="card-subtitle">Associate Professor</p>
+        <h5 class="card-title">{{ config.extra.card.firstname }} {{ config.extra.card.lastname }}{% if config.extra.card.extra_title %}, {{ config.extra.card.extra_title }}{% endif %}
+
+        </h5>
+        <p class="card-subtitle">{{ config.extra.card.position }}</p>
         <p class="card-text">
-            <a href="https://www.lre.epita.fr/">EPITA
-                Research Laboratory</a><br>
-            14-16 rue Voltaire<br>
-            94270 Le Kremlin-Bicêtre<br>
-            FRANCE
+            {% if config.extra.card.company_website %}
+                <a href="{{ config.extra.card.company_website }}">{{ config.extra.card.company }}</a>
+            {% else %}
+                {{ config.extra.card.company }}
+            {% endif %}
+            <br>
+            {% if config.extra.card.company_street %}
+                {{ config.extra.card.company_street }}<br>
+            {% endif %}
+            {{ config.extra.card.company_city }}<br>
+            {{ config.extra.card.company_country }}
         </p>
     </div>
     <div class="card-footer" style="height: 3em; display: flex; justify-content: center; align-items: center;">
-        <a href="mailto:baptiste.esteban@epita.fr" target="_blank" rel="noopener" class="">
+        <a href="mailto:{{ config.extra.card.email }}" target="_blank" rel="noopener" class="">
             <i class="fa-enveloppe icon-link icon-hover fa-2x mx-2"></i>
         </a>
-        <a href="https://www.linkedin.com/in/baptisteesteban" target="_blank" rel="noopener">
+        {% if config.extra.card.linkedin %}
+        <a href="{{ config.extra.card.linkedin }}" target="_blank" rel="noopener">
             <i class="fa-linkedin icon-link icon-hover fa-2x mx-2"></i>
         </a>
-        <a href="https://github.com/baptisteesteban" target="_blank" rel="noopener">
+        {% endif %}
+        {% if config.extra.card.github %}
+        <a href="{{ config.extra.card.github }}" target="_blank" rel="noopener">
             <i class="fa-github icon-link icon-hover fa-2x mx-2"></i>
         </a>
-        <a href="https://orcid.org/0000-0002-6477-7666" target="_blank" rel="noopener">
+        {% endif %}
+        {% if config.extra.card.orcid %}
+        <a href="{{ config.extra.card.orcid }}" target="_blank" rel="noopener">
             <i class="fa-orcid icon-link icon-hover fa-2x mx-2"></i>
         </a>
-        <a href="https://scholar.google.com/citations?user=oMFBuyEAAAAJ&hl=fr&oi=ao" target="_blank" rel="noopener">
+        {% endif %}
+        {% if config.extra.card.scholar %}
+        <a href="{{ config.extra.card.scholar }}" target="_blank" rel="noopener">
             <i class="fa-google-scholar icon-link icon-hover fa-2x mx-2"></i>
         </a>
+        {% endif %}
     </div>
 </div>

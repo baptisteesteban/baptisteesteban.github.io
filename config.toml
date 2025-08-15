@@ -14,3 +14,21 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+title = "Baptiste Esteban"
+
+[extra.card]
+firstname = "Baptiste"
+lastname = "Esteban"
+picture_path = "baptiste_esteban_photo.png" # File must be in the `static` directory
+extra_title = "PhD"
+position = "Associate Professor"
+company = "EPITA Research Laboratory"
+company_website = "https://www.lre.epita.fr"
+company_street = "14-16 rue Voltaire"
+company_city = "94270 Le Kremlin-Bicêtre"
+company_country = "FRANCE"
+email = "baptiste.esteban@epita.fr"
+linkedin = "https://www.linkedin.com/in/baptisteesteban"
+github = "https://github.com/baptisteesteban"
+orcid = "https://orcid.org/0000-0002-6477-7666"
+scholar = "https://scholar.google.com/citations?user=oMFBuyEAAAAJ&hl=fr&oi=ao"
