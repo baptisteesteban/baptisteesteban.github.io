@@ -34,7 +34,7 @@ Carlinet](https://www.lre.epita.fr/perso/edwin-carlinet), and [Didier
 Verna](https://www.lre.epita.fr/perso/didier-verna). After my thesis, from
 November 2023 to August 2025, I worked at [Spimed-AI](https://www.spimed-ai.com)
 on automatic Coronary Artery Dicease (CAD) diagnosis from Coronary CT
-Angiography until September 2025.
+Angiography (CCTA).
 
 <p><strong>Keywords:</strong> &emsp;
 <a  class="badge text-bg-primary"
