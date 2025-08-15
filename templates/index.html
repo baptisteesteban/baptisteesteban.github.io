@@ -4,44 +4,7 @@
 <div class="container">
     <div class="row" style="display: flex; align-items: stretch;">
         <div class="col-12 col-lg-4 mb-4 mb-lg-0">
-            <div class="card h-100">
-                <style>
-                    .card-footer a:hover {
-                        text-decoration: none;
-                    }
-                </style>
-                <img src="baptiste_esteban_photo.png" class="card-img-top">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Baptiste Esteban, PhD</h5>
-                    <p class="card-subtitle">Associate Professor</p>
-                    <p class="card-text">
-                        <a href="https://www.lre.epita.fr/">EPITA
-                            Research Laboratory</a><br>
-                        14-16 rue Voltaire<br>
-                        94270 Le Kremlin-Bicêtre<br>
-                        FRANCE
-                    </p>
-                </div>
-                <div class="card-footer"
-                    style="height: 3em; display: flex; justify-content: center; align-items: center;">
-                    <a href="mailto:baptiste.esteban@epita.fr" target="_blank" rel="noopener" class="">
-                        <i class="fa-enveloppe icon-hover fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/baptisteesteban" target="_blank" rel="noopener">
-                        <i class="fa-linkedin icon-hover fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://github.com/baptisteesteban" target="_blank" rel="noopener">
-                        <i class="fa-github icon-hover fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://orcid.org/0000-0002-6477-7666" target="_blank" rel="noopener">
-                        <i class="fa-orcid icon-hover fa-2x mx-2"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=oMFBuyEAAAAJ&hl=fr&oi=ao" target="_blank"
-                        rel="noopener">
-                        <i class="fa-google-scholar icon-hover fa-2x mx-2"></i>
-                    </a>
-                </div>
-            </div>
+            {% include "components/card.html" %}
         </div>
         <div class="col-12 col-lg-8">
             <div class="shadow-none p-4 mb-5 bg-body-tertiary rounded h-100">
@@ -86,15 +49,18 @@
                     </p>
 
                     <p><strong>Keywords:</strong> &emsp;<a class="badge
-                    text-bg-primary" href="https://en.wikipedia.org/wiki/Mathematical_morphology">Mathematical
-                            Morphology</a> <a class="badge text-bg-primary"
+                    text-bg-primary" style="text-decoration: none;"
+                            href="https://en.wikipedia.org/wiki/Mathematical_morphology">Mathematical
+                            Morphology</a> <a class="badge text-bg-primary" style="text-decoration: none;"
                             href="https://people.irisa.fr/Sebastien.Lefevre/publis/joi2018.pdf">Hierarchical
                             Representations of Images</a> <a class="badge
-                    text-bg-primary" href="https://en.wikipedia.org/wiki/Generic_programming">Generic
-                            Programming</a> <a class="badge text-bg-primary"
+                    text-bg-primary" style="text-decoration: none;"
+                            href="https://en.wikipedia.org/wiki/Generic_programming">Generic
+                            Programming</a> <a class="badge text-bg-primary" style="text-decoration: none;"
                             href="https://en.wikipedia.org/wiki/C%2B%2B">C++
-                            language</a> <a class="badge text-bg-primary" href="https://www.python.org/">Python
-                            language</a> <a class="badge text-bg-primary"
+                            language</a> <a class="badge text-bg-primary" style="text-decoration: none;"
+                            href="https://www.python.org/">Python
+                            language</a> <a class="badge text-bg-primary" style="text-decoration: none;"
                             href="https://en.wikipedia.org/wiki/Medical_imaging">Medical Imaging</a></p>
             </div>
         </div>

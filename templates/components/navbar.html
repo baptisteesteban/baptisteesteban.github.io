@@ -6,11 +6,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" href="#">Home</a>
-                <a class="nav-link" href="#">CV</a>
-                <a class="nav-link" href="#">Research</a>
-                <a class="nav-link" href="#">Teaching</a>
-                <a class="nav-link" href="#">Publications</a>
+                {% set root = get_section(path="_index.md") %}
+                <a class="nav-link" href="{{ root.permalink | safe }}">{{ root.title }}</a>
+                {% for sp in root.subsections %}
+                {% set subsection = get_section(path=sp) %}
+                <a class="nav-link" href="{{ subsection.permalink | safe }}">{{ subsection.title }}</a>
+                {% endfor %}
             </div>
         </div>
     </div>
