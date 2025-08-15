@@ -24,38 +24,14 @@
             text-decoration: underline;
         }
     </style>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="#">Home</a>
-                    <a class="nav-link" href="#">CV</a>
-                    <a class="nav-link" href="#">Research</a>
-                    <a class="nav-link" href="#">Teaching</a>
-                    <a class="nav-link" href="#">Publications</a>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-
+    {% include "components/navbar.html" %}
 
     <main class="flex-grow-1 mt-4">
         {% block content %} {% endblock content %}
     </main>
 
-    <footer class="bg-body-tertiary text-center py-4 mt-5 border-top">
-        <div class="container">
-            Built with <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a>
-            &amp; <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>. Icons are from <a
-                href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome Free</a>.
-        </div>
-    </footer>
+    {% include "components/footer.html" %}
 </body>
 
 </html>
