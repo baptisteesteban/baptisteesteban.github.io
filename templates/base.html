@@ -21,7 +21,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+    {% if section and section.title == "Home" %}
     <link href="font-awesome/icons.css" rel="stylesheet">
+    {% endif %}
+    {% if section and section.title == "CV" %}
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/tutorials/timelines/timeline-8/assets/css/timeline-8.css">
+    {% endif %}
 </head>
 
 <body class="d-flex flex-column min-vh-100">

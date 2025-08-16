@@ -1,6 +1,4 @@
 +++
 title = "CV"
-template = "page.html"
+template = "cv.html"
 +++
-
-**TODO**

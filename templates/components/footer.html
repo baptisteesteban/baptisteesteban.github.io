@@ -1,7 +1,10 @@
 <footer class="bg-body-tertiary text-center py-4 mt-5 border-top">
     <div class="container">
-        Built with <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a>
+        &copy; 2025 Baptiste Esteban. Built with <a href="https://www.getzola.org/" target="_blank" rel="noopener">Zola</a>
         &amp; <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a>. Icons are from <a
             href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome Free</a>.
+        {% if section and section.title == "CV" %}
+        Timelines are built using <a href="https://bootstrapbrain.com/demo/tutorials/timelines/timeline-8/">Bootstrap Brain</a>
+        {% endif %}
     </div>
 </footer>
