@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% import "macros/bibliography.html" as macros %}
+
+{% block content %}
+
+{% set data = load_data(path="content/publications/baptiste_bibliography.bib", format="bibtex") %}
+
+<div class="container">
+    <div class="shadow-none p-4 mb-5 bg-body-tertiary rounded h-100">
+        <h1>Publications</h1>
+        {% set biblio = data.bibliographies %}
+        {{ macros::print_bibliography(biblio=biblio, filter="thesis", title="Thesis") }}
+        {{ macros::print_bibliography(biblio=biblio, filter="journal", title="Journals") }}
+        {{ macros::print_bibliography(biblio=biblio, filter="conf", title="International Conferences") }}
+        {{ macros::print_bibliography(biblio=biblio, filter="nat", title="National Conferences") }}
+        {{ macros::print_bibliography(biblio=biblio, filter="talks", title="Talks") }}
+    </div>
+</div>
+
+{% endblock content %}

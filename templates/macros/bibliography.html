@@ -16,3 +16,28 @@
         {% endif %}                
     {% endfor %}
 {% endmacro print_authors %}
+
+{% macro print_bibliography(biblio, filter, title) %}
+    {% set entry_list = biblio | filter(attribute="tags.tag", value=filter) %}
+    {% set n = entry_list | length %}
+    {% if n > 0 %}
+    <h2>{{title}}</h2>
+    <ul>
+        {% for entry in entry_list %}
+            <li>
+                {% set data = entry.tags %}
+                {{ self::print_authors(authors=data.author) }}
+                ({{ data.year }})
+                <span>{{ data.title }}</span>.
+                <i>{{ data.booktitle }}</i>
+                {% if data.doi %}
+                    <a href="https://doi.org/{{ data.doi }}">{{data.doi}}</a>
+                {% endif %}
+                {% if data.pdf %}
+                    [<a href="{{data.pdf}}">PDF</a>]
+                {% endif %}
+            </li>
+        {% endfor %}
+        {% endif %}
+    </ul>
+{% endmacro print_bibliography %}
