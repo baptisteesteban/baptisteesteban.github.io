@@ -18,7 +18,7 @@
 {% endmacro print_authors %}
 
 {% macro print_bibliography(biblio, filter, title) %}
-    {% set entry_list = biblio | filter(attribute="tags.tag", value=filter) %}
+    {% set entry_list = biblio | filter(attribute="tags.tag", value=filter) | sort(attribute="tags.year") | reverse %}
     {% set n = entry_list | length %}
     {% if n > 0 %}
     <h2>{{title}}</h2>
@@ -28,8 +28,11 @@
                 {% set data = entry.tags %}
                 {{ self::print_authors(authors=data.author) }}
                 ({{ data.year }})
-                <span>{{ data.title }}</span>.
+                <span style="text-decoration: underline;">{{ data.title }}</span>.
                 <i>{{ data.booktitle }}</i>
+                {% if data.note %}
+                ({{ data.note }})
+                {% endif %}
                 {% if data.doi %}
                     <a href="https://doi.org/{{ data.doi }}">{{data.doi}}</a>
                 {% endif %}
