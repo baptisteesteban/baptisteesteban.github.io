@@ -1,0 +1,18 @@
+{% macro print_authors(authors) %}
+    {# Get the list of authors #}
+    {% set author_list = authors | split(pat="and")%}
+    {% set authors_len = author_list | length %}
+    {% for author in author_list%}
+        {# Separate first name and last name #}
+        {% set separated = author | split(pat=",") %}
+        {% set first_name = separated[1] | trim %}
+        {% set last_name = separated[0] | trim %}
+
+        {# If it is my name, bold font, else normal #}
+        {% if first_name == "Baptiste" and last_name == "Esteban" %}
+        <strong>{{first_name}} {{ last_name }}</strong>{% if loop.index == authors_len %}{% elif loop.index == authors_len - 1 %} and{% else %},{% endif %}
+        {% else %}
+        {{first_name}} {{ last_name }}{% if loop.index == authors_len %}{% elif loop.index == authors_len - 1 %} and{% else %},{% endif %}
+        {% endif %}                
+    {% endfor %}
+{% endmacro print_authors %}
