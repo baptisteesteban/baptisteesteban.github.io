@@ -21,10 +21,10 @@
     {% set entry_list = biblio | filter(attribute="tags.tag", value=filter) | sort(attribute="tags.year") | reverse %}
     {% set n = entry_list | length %}
     {% if n > 0 %}
-    <h2>{{title}}</h2>
-    <ul>
+    <h2 class="mt-5">{{title}}</h2>
+    <ul class="mt-4 list-group">
         {% for entry in entry_list %}
-            <li>
+            <li class="list-group-item">
                 {% set data = entry.tags %}
                 {{ self::print_authors(authors=data.author) }}
                 ({{ data.year }})
@@ -36,8 +36,9 @@
                 {% if data.doi %}
                     <a href="https://doi.org/{{ data.doi }}">{{data.doi}}</a>
                 {% endif %}
+                <br>
                 {% if data.pdf %}
-                    [<a href="{{data.pdf}}">PDF</a>]
+                    [<a href="{{data.pdf}}">paper</a>]
                 {% endif %}
             </li>
         {% endfor %}
