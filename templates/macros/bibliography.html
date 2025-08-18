@@ -37,8 +37,22 @@
                     <a href="https://doi.org/{{ data.doi }}">{{data.doi}}</a>
                 {% endif %}
                 <br>
+                {% if data.abstract %}
+                    {% set dt_id = "content." ~ entry.citation_key %}
+                    [<a class="link" type="button" data-bs-toggle="collapse" data-bs-target="#{{dt_id}}" aria-expanded="false" aria-controls="{{dt_id}}">abstract</a>]
+                {% endif %}
                 {% if data.pdf %}
                     [<a href="{{data.pdf}}">paper</a>]
+                {% endif %}
+                {% if data.abstract %}
+                    {% set dt_id = "content." ~ entry.citation_key %}
+                    <div class="collapse" id="{{dt_id}}">
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <p style="text-align: justify">{{ data.abstract }}</p>
+                            </div>
+                        </div>
+                    </div>
                 {% endif %}
             </li>
         {% endfor %}

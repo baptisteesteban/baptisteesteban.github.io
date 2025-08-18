@@ -5,7 +5,28 @@
   pdf       = {https://theses.hal.science/tel-04531954/document},
   booktitle = {Sorbonne Université},
   note      = {PhD Thesis},
-  tag       = {thesis}
+  tag       = {thesis},
+  abstract  = {Image processing libraries play an important role in the researcher toolset and should respect
+               three criteria: genericity, performance, and interactivity. In short, genericity boosts code reuse
+               and algorithm flexibility for various data inputs, while performance speeds up experiments
+               and supports real-time applications. Additionally, interactivity allows software evolution and
+               maintenance without full recompilation, often through integration with dynamic languages like
+               Python or Julia. The first two criteria are not straightforward to reach with static languages
+               such as C++ or Rust which require knowing some information at compile-time to optimize
+               generated machine code related to the different input and output data types of an algorithm.
+               The latest criterion usually requires waiting until runtime to obtain type information and is
+               thus performed at the cost of runtime efficiency. The work presented in this thesis aims to go
+               beyond this limitation in the context of image processing algorithms. To do so, a methodology to
+               develop generic algorithms whose type information about its input and output data may be known
+               either at compile-time or at runtime is presented. This methodology is evaluated on different
+               image processing algorithmic schemes, and it is concluded that the performance gap between the
+               runtime and compile-time versions of the construction algorithm for hierarchical representations
+               of images is negligible. As an application, hierarchical representations are employed to expand
+               the applicability of grayscale noise level estimation to color images to enhance its genericity. That
+               raises the importance of studying the impact of such corruption in the hierarchies built on noisy
+               images to improve their efficiency in the presence of noise. It is demonstrated that the noise has an
+               impact on the tree structure, and this impact is related to some kinds of functional in the context
+               of energy optimization on hierarchies.}
 }
 
 @misc{carlinet.25.gtgdmm,
