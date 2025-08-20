@@ -8,10 +8,10 @@
             <div class="navbar-nav">
                 {% set root = get_section(path="_index.md") %}
                 <a class="nav-link" href="{{ root.permalink | safe }}">{{ root.title }}</a>
-                {% for sp in root.subsections %}
-                {% set subsection = get_section(path=sp) %}
-                <a class="nav-link" href="{{ subsection.permalink | safe }}">{{ subsection.title }}</a>
-                {% endfor %}
+                {% set cv = get_section(path="cv/_index.md") %}
+                <a class="nav-link" href="{{ cv.permalink | safe }}">{{ cv.title }}</a>
+                {% set publi = get_section(path="publications/_index.md") %}
+                <a class="nav-link" href="{{ publi.permalink | safe }}">{{ publi.title }}</a>
             </div>
         </div>
     </div>
