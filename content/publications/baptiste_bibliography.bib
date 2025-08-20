@@ -61,7 +61,16 @@
   year      = {2025},
   note      = {to appear},
   booktitle = {Proceedings of the 4th International Conference on Discrete Geometry and Mathematical Morphology (DGMM '25)},
-  tag       = {conf}
+  tag       = {conf},
+  abstract  = {The tree of shapes (ToS) is a self-dual and contrast invariant hierarchical representation of images,
+               making it highly suitable for various image processing tasks such as filtering, segmentation, and object
+               detection. The existing linear algorithm for computing the ToS is effective for low-quantized images,
+               but exhibits increased complexity for high-quantized images due to the reliance on data structures like
+               red-black trees, which have logarithmic complexity for insertion and deletion operations. This paper
+               introduces a novel algorithm based on the fast marching method to compute a distance map from which the
+               ToS is extracted. This method takes advantage of the distribution of the gradient values of the image
+               pixels to make use of an efficient priority queue structure that lowers the computational complexity of
+               the ToS on high-dynamic range images.}
 }
 
 @inproceedings{carlinet.25.icip,
@@ -71,7 +80,18 @@
   month     = {9},
   note      = {to appear},
   booktitle = {Proceedings of the 2025 IEEE International Conference on Image Processing (ICIP '25)},
-  tag       = {conf}
+  tag       = {conf},
+  abstract  = {The tree of shapes of an image (ToS) is a powerful hierarchical representation of image. Being self-dual
+               and contrast invariant, it is well-suited for several image processing tasks such as filtering,
+               segmentation or object detection. It is a must-have tool in the toolbox of image processing
+               practitioners, if only as a pre- or post-processing usage. Nevertheless, the ToS computation is a complex
+               task, so far, limited to CPU. This is a major bottleneck in any deep-learning or real-time image
+               processing pipeline that requires GPUs for speed. This limitation is due to a front propagation
+               algorithm, used in the ToS construction, that is intrinsically sequential and not well-suited for
+               massively parallel architectures. In this paper, we present a new approach to compute, end-to-end, the
+               tree of shapes on massively parallel architectures that outperforms the existing algorithms. The
+               parallelization strategies introduced in this paper can further be used to speed up many
+               propagation-based algorithms such as distance transforms.}
 }
 
 @inproceedings{esteban.23.caip,
@@ -81,7 +101,18 @@
   year      = {2023},
   doi       = {10.1007/978-3-031-44240-7_22},
   pdf       = {https://hal.science/hal-04226810/document},
-  tag       = {conf}
+  tag       = {conf},
+  abstract  = {Hierarchical representations are very convenient tools when working with images. Among them, the α-tree
+               is the basis of several powerful hierarchies used for various applications such as image simplification,
+               object detection, or segmentation. However, it has been demonstrated that these tasks are very sensitive
+               to the presence of noise in images. While the quality of some α-tree applications has been studied,
+               including some with noisy images, the noise impact on the whole structure has been little investigated.
+               Thus, in this paper, we examine the structure of α-trees built on images in the presence of noise with
+               respect to the noise level. We compare its effects on constant and natural images, with different kinds
+               of content, and we demonstrate the relation between the noise level and the distribution of every α-tree
+               node depth. Furthermore, we extend this study to the node persistence under a given energy criterion,
+               and we propose a novel energy definition that allows assessing the robustness of a region to the noise.
+               We finally observe that the choice of the energy has a great impact on the tree structure.}
 }
 
 @inproceedings{esteban.23.gretsi,
@@ -90,7 +121,14 @@
   title     = {Analyse structurelle de l'influence du bruit sur l'arbre alpha},
   year      = {2023},
   tag       = {nat},
-  pdf       = {https://hal.science/hal-04226781/document}
+  pdf       = {https://hal.science/hal-04226781/document},
+  abstract  = {L'arbre alpha est une représentation hiérarchique utilisée dans divers traitements d'une image tels que
+               la segmentation ou la simplification. Ces traitements sont néanmoins sensibles au bruit, ce qui nécessite
+               parfois de les adapter. Or, l'influence du bruit sur la structure de l'arbre alpha n'a été que peu
+               étudiée dans la littérature. Ainsi, nous proposons une étude de l'impact du bruit en fonction de son
+               niveau sur la structure de l'arbre. De plus, nous étendons cette étude à la persistance des nœuds de
+               l'arbre en fonction d'une énergie donnée, et nous concluons que certaines fonctionnelles sont plus
+               sensibles au bruit que d'autres}
 }
 
 @inproceedings{esteban.22.gretsi2,
@@ -99,7 +137,17 @@
   booktitle = {XVIIIème Colloque Francophone de Traitement du Signal et des Images (GRETSI '22)},
   tag       = {nat},
   year      = {2022},
-  pdf       = {https://hal.science/hal-03891032/document}
+  pdf       = {https://hal.science/hal-03891032/document},
+  abstract  = {Le niveau de bruit est une information importante pour certaines applications de traitement d'image
+               telles que la segmentation ou le débruitage. Par le passé, nous avons proposé une méthode pour
+               estimer ce niveau de bruit en s'adaptant au contenu d"une image en niveau de gris et nous avons montré
+               que ses performances dépasse celle de l'état de l'art. Dans cet article, nous proposons une extension
+               de cette méthode aux images couleurs dont les valeurs multivariées, dénuées de relation d'ordre
+               naturelle, impliquent de nouvelles problématiques. Afin de les résoudre, nous utilisons deux outils
+               provenant de la morphologie mathématique : l'arbre des formes multivarié et l'apprentissage de treillis
+               complet. Enfin, nous confirmons les conclusions de nos précédents travaux pour l'estimation de la
+               fonction de niveau de bruit couleur, montrant que l'adaptation au contenu d'une image donne de meilleures
+               performances que l'utilisation de blocs carrés.}
 }
 
 @inproceedings{esteban.22.gretsi1,
@@ -108,7 +156,19 @@
   booktitle = {XVIIIème Colloque Francophone de Traitement du Signal et des Images (GRETSI '22)},
   tag       = {nat},
   year      = {2022},
-  pdf       = {https://hal.science/hal-03891028/document}
+  pdf       = {https://hal.science/hal-03891028/document},
+  abstract  = {La généricité est un paradigme puissant dont l'usage permet d'implémenter un unique algorithme et de
+               l'exécuter sur différents types de données. De ce fait, il est très utilisé lors du développement d'une
+               bibliothèque scientifique, notamment en traitement d'images où les algorithmes peuvent s'appliquer à
+               différents types d'images. Le langage C++ est un langage de choix pour ce genre de bibliothèque. Il
+               supporte ce paradigme et ses applications sont performantes compte tenu de sa nature compilée. Néanmoins,
+               contrairement à des langages dynamiques tels que Python ou Julia, ses capacités en matière
+               d'interactivité, utiles lors des étapes de prototypage d'algorithmes, sont limitées en raison de sa
+               nature statique. Nous proposons donc dans cet article une revue des différentes techniques qui permettent
+               d'utiliser à la fois le polymorphisme statique et dynamique, puis nous évaluons le coût du transfert
+               d'information statique vers des informations connues à l'exécution. En particulier, nous montrons que
+               certaines informations d'une image sont plus importantes que d'autres en matière de performance, et que
+               le surcoût dépend aussi de l'algorithme utilisé.}
 }
 
 @inproceedings{esteban.22.icpr,
@@ -118,7 +178,21 @@
   year      = {2022},
   tag       = {conf},
   pdf       = {https://hal.science/hal-03891027/document},
-  doi       = {10.1109/ICPR56361.2022.9956218}
+  doi       = {10.1109/ICPR56361.2022.9956218},
+  abstract  = {Noise level information is crucial for many image processing tasks, such as image denoising. To estimate
+               it, it is necessary to find homegeneous areas within the image which contain only noise. Rank-based
+               methods have proven to be efficient to achieve such a task. In the past, we proposed a method to estimate
+               the noise level function (NLF) of grayscale images using the tree of shapes (ToS). This method, relying
+               on the connected components extracted from the ToS computed on the noisy image, had the advantage of
+               being adapted to the image content, which is not the case when using square blocks, but is still
+               restricted to grayscale images. In this paper, we extend our ToS-based method to color images. Unlike
+               grayscale images, the pixel values in multivariate images do not have a natural order relationship, which
+               is a well-known issue when working with mathematical morphology and rank statistics. We propose to use
+               the multivariate ToS to retrieve homogeneous regions. We derive an order relationship for the
+               multivariate pixel values thanks to a complete lattice learning strategy and use it to compute the rank
+               statistics. The obtained multivariate NLF is composed of one NLF per channel. The performance of the
+               proposed method is compared with the one obtained using square blocks, and validates the soundness of the
+               multivariate ToS structure for this task.}
 }
 
 @inproceedings{esteban.22.gpce,
@@ -128,7 +202,18 @@
   year      = {2022},
   pdf       = {https://hal.science/hal-03891000/document},
   doi       = {10.1145/3564719.3568693},
-  tag       = {conf}
+  tag       = {conf},
+  abstract  = {Generic programming is a powerful paradigm abstracting data structures and algorithms to improve their
+               reusability, as long as they respect a given interface. Coupled with a performance-driven language, it is
+               a paradigm of choice for scientific libraries where the implementation of manipulated objects may change
+               depending on their use case, or for performance purposes. In those performance-driven languages,
+               genericity is often implemented statically to perform some optimization. This does not fit well with the
+               dynamism needed to handle objects which may only be known at runtime. Thus, in this article, we evaluate
+               a model that couples static genericity with a dynamic model based on type erasure in the context of image
+               processing. Its cost is assessed by comparing the performance of the implementation of some common image
+               processing algorithms in C++ and Rust, two performance-driven languages supporting some form of
+               genericity. Finally, we demonstrate that compile-time knowledge of some specific information is critical
+               for performance, and also that the runtime overhead depends on the algorithmic scheme in use.}
 }
 
 @inproceedings{naser.20.spie,
@@ -137,7 +222,17 @@
   title     = {Revisiting transform and partitioning tools for post VVC codec},
   year      = {2020},
   doi       = {10.1117/12.2567631},
-  tag       = {conf}
+  tag       = {conf},
+  abstract  = {Transform and partitioning represent core components of the video coding architectures. Compared with
+               HEVC, VVC is characterized by higher number of transform types, additional transform level (LFNST) and
+               more flexible partitioning via the binary tree and ternary tree. This flexibility in transform and
+               partitioning provides about 2% and 10% coding gain. Nevertheless, the current design is not ultimately
+               optimized for the highest coding gain, but rather for the compromise with the design complexity. That is,
+               the potential of combining higher transform and partitioning diversity is higher than the current state
+               in VVC. This can be demonstrated by utilizing some early transform and partitioning proposals in the
+               context of VVC development, which were not adopted due to the complexity concerns. In this paper, we
+               revisit these designs targeting the maximum bitrate saving. This is to establish a new state of the art
+               anchor for the post VVC development.}
 }
 
 @inproceedings{esteban.19.gretsi,
@@ -146,7 +241,14 @@
   booktitle = {Proceedings of the 27st Symposium on Signal and Image Processing (GRETSI '19)},
   year      = {2019},
   tag       = {nat},
-  pdf       = {https://gretsi.fr/data/colloque/pdf/2019_tochon649.pdf}
+  pdf       = {https://gretsi.fr/data/colloque/pdf/2019_tochon649.pdf},
+  abstract  = {La connaissance du niveau de bruit dans une image est précieuse pour de nombreuses applications en
+               traitement d'images. L"estimation de la fonction de niveau de bruit requiert l'identification des zones
+               homogènes sur lesquelles les paramètres du bruit peuvent être calculés. Sutour et al. ont proposé une
+               méthode d'estimation de la fonction de niveau de bruit se basant sur la recherche de zones homogènes de
+               forme carrée, donc inadaptées au contenu local de l'image. Nous généralisons cette méthode à la recherche
+               de zones homogènes de forme quelconque en nous basant sur la représentation par arbre des formes de
+               l'image étudiée, permettant ainsi une estimation plus robuste de la fonction de niveau de bruit.}
 }
 
  @inproceedings{esteban.19.caip,
@@ -156,5 +258,11 @@
   author    = {Esteban, Baptiste and Tochon, Guillaume and Géraud, Thierry},
   year      = {2019},
   tag       = {conf},
-  pdf       = {https://www.lre.epita.fr/dload/papers/esteban.19.caip.pdf}
+  pdf       = {https://www.lre.epita.fr/dload/papers/esteban.19.caip.pdf},
+  abstract  = {The knowledge of the noise level within an image is a valuable information for many image processing
+               applications. Estimating the noise level function (NLF) requires the identification of homogeneous
+               regions, upon which the noise parameters are computed. Sutour et al. have proposed a method to estimate
+               this NLF based on the search for homogeneous regions of square shape. We generalize this method to the
+               search for homogeneous regions with arbitrary shape thanks to the tree of shapes representation of the
+               image under study, thus allowing a more robust and precise estimation of the noise level function.}
 }
