@@ -1,0 +1,61 @@
+{% macro print_authors(authors) %}
+    {# Get the list of authors #}
+    {% set author_list = authors | split(pat="and")%}
+    {% set authors_len = author_list | length %}
+    {% for author in author_list%}
+        {# Separate first name and last name #}
+        {% set separated = author | split(pat=",") %}
+        {% set first_name = separated[1] | trim %}
+        {% set last_name = separated[0] | trim %}
+
+        {# If it is my name, bold font, else normal #}
+        {% if first_name == "Baptiste" and last_name == "Esteban" %}
+        <strong>{{first_name}} {{ last_name }}</strong>{% if loop.index == authors_len %}{% elif loop.index == authors_len - 1 %} and{% else %},{% endif %}
+        {% else %}
+        {{first_name}} {{ last_name }}{% if loop.index == authors_len %}{% elif loop.index == authors_len - 1 %} and{% else %},{% endif %}
+        {% endif %}                
+    {% endfor %}
+{% endmacro print_authors %}
+
+{% macro print_bibliography(biblio, filter, title) %}
+    {% set entry_list = biblio | filter(attribute="tags.tag", value=filter) | sort(attribute="tags.year") | reverse %}
+    {% set n = entry_list | length %}
+    {% if n > 0 %}
+    <h2 class="mt-5">{{title}}</h2>
+    <ul class="mt-4 list-group">
+        {% for entry in entry_list %}
+            <li class="list-group-item">
+                {% set data = entry.tags %}
+                {{ self::print_authors(authors=data.author) }}
+                ({{ data.year }})
+                <span style="text-decoration: underline;">{{ data.title }}</span>.
+                <i>{{ data.booktitle }}</i>
+                {% if data.note %}
+                ({{ data.note }})
+                {% endif %}
+                {% if data.doi %}
+                    <a href="https://doi.org/{{ data.doi }}">{{data.doi}}</a>
+                {% endif %}
+                <br>
+                {% if data.abstract %}
+                    {% set dt_id = "content." ~ entry.citation_key %}
+                    [<a class="link" type="button" data-bs-toggle="collapse" data-bs-target="#{{dt_id}}" aria-expanded="false" aria-controls="{{dt_id}}">abstract</a>]
+                {% endif %}
+                {% if data.pdf %}
+                    [<a href="{{data.pdf}}">paper</a>]
+                {% endif %}
+                {% if data.abstract %}
+                    {% set dt_id = "content." ~ entry.citation_key %}
+                    <div class="collapse" id="{{dt_id}}">
+                        <div class="card mt-3">
+                            <div class="card-body">
+                                <p style="text-align: justify">{{ data.abstract }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            </li>
+        {% endfor %}
+        {% endif %}
+    </ul>
+{% endmacro print_bibliography %}
