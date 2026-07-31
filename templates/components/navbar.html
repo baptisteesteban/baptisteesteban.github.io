@@ -10,10 +10,10 @@
                 <a class="nav-link" href="{{ root.permalink | safe }}">{{ root.title }}</a>
                 {% set cv = get_section(path="cv/_index.md") %}
                 <a class="nav-link" href="{{ cv.permalink | safe }}">{{ cv.title }}</a>
-                {% set publi = get_section(path="publications/_index.md") %}
-                <a class="nav-link" href="{{ publi.permalink | safe }}">{{ publi.title }}</a>
                 {% set teaching = get_section(path="teaching/_index.md") %}
                 <a class="nav-link" href="{{ teaching.permalink | safe }}">{{ teaching.title }}</a>
+                {% set publi = get_section(path="publications/_index.md") %}
+                <a class="nav-link" href="{{ publi.permalink | safe }}">{{ publi.title }}</a>
             </div>
         </div>
     </div>
