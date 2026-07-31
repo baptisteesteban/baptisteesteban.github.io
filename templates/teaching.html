@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% set data = load_data(path="content/teaching/teaching_summary.csv", format="csv") %}
+{% set activities = data.records | sort | reverse %}
+
+<div class="container">
+	<div class="shadow-none p-4 mb-5 bg-body-tertiary rounded h-100">
+		<h1>Teaching</h1>
+
+		{% if activities | length == 0 %}
+		<div class="alert alert-info mb-0" role="alert">
+			No teaching activity is available yet.
+		</div>
+		{% else %}
+		<h2 class="h4 mt-4">Activities by Year</h2>
+		<div class="list-group mb-4">
+			{% set_global displayed_year = "" %}
+			{% for activity in activities %}
+			{% if activity[0] != displayed_year %}
+			{% if not loop.first %}
+			<div class="list-group-item list-group-item-secondary py-2"></div>
+			{% endif %}
+			<div class="list-group-item list-group-item-primary">
+				<strong>{{ activity[0] }}</strong>
+			</div>
+			{% set_global displayed_year = activity[0] %}
+			{% endif %}
+			<div class="list-group-item">
+				<div class="d-flex flex-wrap gap-2 justify-content-between align-items-start">
+					<div>
+						<div><strong>{{ activity[1] }}</strong></div>
+						<div class="text-secondary small">
+							{{ activity[3] }} | {{ activity[4] }} | {{ activity[2] | upper }}
+						</div>
+					</div>
+					<span class="badge text-bg-primary rounded-pill">{{ activity[5] }} h</span>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+
+		<h2 class="h4">Teaching Hours Summary</h2>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover align-middle">
+				<thead class="table-light">
+					<tr>
+						<th scope="col">Year</th>
+						<th scope="col" class="text-end">TP (h)</th>
+						<th scope="col" class="text-end">TD (h)</th>
+						<th scope="col" class="text-end">CM (h)</th>
+						<th scope="col" class="text-end">Total (h)</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% set_global current_year = activities[0][0] %}
+					{% set_global year_tp = 0.0 %}
+					{% set_global year_td = 0.0 %}
+					{% set_global year_cm = 0.0 %}
+
+					{% set_global total_tp = 0.0 %}
+					{% set_global total_td = 0.0 %}
+					{% set_global total_cm = 0.0 %}
+
+					{% for activity in activities %}
+					{% if activity[0] != current_year %}
+					<tr>
+						<th scope="row">{{ current_year }}</th>
+						<td class="text-end">{{ year_tp }}</td>
+						<td class="text-end">{{ year_td }}</td>
+						<td class="text-end">{{ year_cm }}</td>
+						<td class="text-end"><strong>{{ year_tp + year_td + year_cm }}</strong></td>
+					</tr>
+					{% set_global current_year = activity[0] %}
+					{% set_global year_tp = 0.0 %}
+					{% set_global year_td = 0.0 %}
+					{% set_global year_cm = 0.0 %}
+					{% endif %}
+
+					{% set hours = activity[5] | float %}
+					{% set type = activity[2] | upper %}
+					{% if type == "TP" %}
+					{% set_global year_tp = year_tp + hours %}
+					{% set_global total_tp = total_tp + hours %}
+					{% elif type == "TD" %}
+					{% set_global year_td = year_td + hours %}
+					{% set_global total_td = total_td + hours %}
+					{% elif type == "CM" %}
+					{% set_global year_cm = year_cm + hours %}
+					{% set_global total_cm = total_cm + hours %}
+					{% endif %}
+					{% endfor %}
+
+					<tr>
+						<th scope="row">{{ current_year }}</th>
+						<td class="text-end">{{ year_tp }}</td>
+						<td class="text-end">{{ year_td }}</td>
+						<td class="text-end">{{ year_cm }}</td>
+						<td class="text-end"><strong>{{ year_tp + year_td + year_cm }}</strong></td>
+					</tr>
+				</tbody>
+				<tfoot class="table-light">
+					<tr>
+						<th scope="row">Total</th>
+						<th class="text-end">{{ total_tp }}</th>
+						<th class="text-end">{{ total_td }}</th>
+						<th class="text-end">{{ total_cm }}</th>
+						<th class="text-end">{{ total_tp + total_td + total_cm }}</th>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+		{% endif %}
+	</div>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,30 @@
+year,title,type,school,level,hours
+2021,Introduction to Image Processing,TP,EPITA,BAC+4,15
+2021,Introduction to Computer Graphics,TP,EPITA,BAC+4,15
+2021,C++ Language,CM,EPITA,BAC+3,16
+2021,Rational Languages Theory,TP,EPITA,BAC+2,8
+2022,Introduction to Image Processing,TP,EPITA,BAC+4,15
+2022,Introduction to Computer Graphics,TP,EPITA,BAC+4,9
+2022,C++ Language,TP,EPITA,BAC+3,32
+2022,Advanced C++ Language,CM,EPITA,BAC+4,3
+2022,Introduction to Signal Processing,TP,EPITA,BAC+3,4
+2023,Introduction to Image Processing,TP,EPITA,BAC+4,12
+2023,Introduction to Computer Graphics,TP,EPITA,BAC+4,9
+2024,Rational Languages Theory,TP,EPITA,BAC+2,14
+2025,Rational Languages Theory,TD,EPITA,BAC+2,20
+2025,Rational Languages Theory,TP,EPITA,BAC+2,30
+2025,Advanced C++,CM,EPITA,BAC+3,4.5
+2025,Advanced C++,TP,EPITA,BAC+3,7.5
+2025,Introduction to Neural Networks,TP,EPITA,BAC+4,12
+2025,Introduction to Big Data,TP,EPITA,BAC+4,24
+2025,Introduction to Signal Processing,TP,EPITA,BAC+3,20
+2026,Advanced Medical Imaging,CM,EPITA,BAC+5,2
+2026,Advanced Medical Imaging,TP,EPITA,BAC+5,10
+2026,Python Refresher,CM,EPITA,BAC+4,3
+2026,Python Refresher,TP,EPITA,BAC+4,9
+2026,Introduction to Big Data,TP,EPITA,BAC+4,12
+2026,Introduction to Deep Learning,TP,EPITA,BAC+4,9
+2026,Introduction to Deep Learning,CM,EPITA,BAC+4,9
+2026,Machine Learning for Pattern Recognition,TP,EPITA,BAC+4,20
+2026,Advanced C++,CM,EPITA,BAC+3,4.5
+2026,Advanced C++,TP,EPITA,BAC+3,7.5
