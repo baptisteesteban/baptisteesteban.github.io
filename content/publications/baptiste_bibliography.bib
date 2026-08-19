@@ -55,6 +55,33 @@
   tag       = {talk}
 }
 
+@inproceddings{esteban.26.icpr,
+  title     = {Faster Geodesic Distance Transform on GPU},
+  doi       = {10.1007/978-3-032-31927-2_25},
+  booktitle = {Proceedings of the 28th International Conference on Pattern Recognition},
+  author    = {Esteban, Baptiste and Carlinet, Edwin},
+  year      = {2026},
+  tag       = {conf},
+  abstract  = {The generalised geodesic distance transform is a
+               fundamental tool that combines Euclidean and geodesic
+               distance transforms. It is used in several image processing
+               tasks, such as interactive segmentation and image
+               colorization. Furthermore, recent applications combine such
+               distance transforms with neural networks to improve
+               performance on these tasks. These use cases typically
+               require an end-to-end pipeline executed on the same
+               hardware to avoid additional performance costs due to
+               memory transfers between devices. While various sequential
+               and parallel algorithms have been proposed for CPUs,
+               existing GPU implementations often fail to fully exploit
+               the hardware capabilities. In this work, we introduce the
+               first block-based algorithms specifically designed to
+               efficiently leverage GPU parallelism for computing the
+               generalised geodesic distance transform. Performance
+               comparisons show that the proposed approaches outperform
+               the state-of-the-art implementation in terms of runtime.}
+}
+
 @inproceedings{carlinet.25.dgmm,
   author    = {Carlinet, Edwin and Esteban, Baptiste},
   title     = {The Tree of Shapes as a distance transform: building the ToS on High-Dynamic Range images},
