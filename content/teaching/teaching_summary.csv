@@ -18,8 +18,8 @@ year,title,type,school,level,hours
 2025,Introduction to Neural Networks,TP,EPITA,BAC+4,12
 2025,Introduction to Big Data,TP,EPITA,BAC+4,24
 2025,Introduction to Signal Processing,TP,EPITA,BAC+3,20
-2026,Advanced Medical Imaging,CM,EPITA,BAC+5,2
-2026,Advanced Medical Imaging,TP,EPITA,BAC+5,10
+2026,Advanced Medical Imaging,CM,EPITA,BAC+5,4
+2026,Advanced Medical Imaging,TP,EPITA,BAC+5,14
 2026,Python Refresher,CM,EPITA,BAC+4,3
 2026,Python Refresher,TP,EPITA,BAC+4,9
 2026,Introduction to Big Data,TP,EPITA,BAC+4,12
