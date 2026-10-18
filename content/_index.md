@@ -22,10 +22,8 @@ keywords = [
 I am an Associate Professor at [EPITA](https://www.epita.fr/), and I conduct my
 research at [EPITA Research Laboratory](https://www.lre.epita.fr) (LRE) within
 the TIRF group. My research interests mainly focus on Mathematical Morphology,
-and particularly on hierarchical representations of images. To this aim, I
-maintain [Pylene](https://gitlab.lre.epita.fr/olena/pylene), a generic and
-efficient image processing library, and its associated Python bindings,
-[Pylena](https://gitlab.lre.epita.fr/olena/pylena).
+and particularly on hierarchical representations of images and their usage in
+deep learning applications.
 
 My teaching activities focus on programming (*C++ programming, Advanced C++
 programming, Python for Big Data*) and image processing, particularly within the
