@@ -1,0 +1,40 @@
+{% set entry_list = [e for e in biblio if e.tags.tag == filter] | sort(attribute="tags.year") | reverse %}
+{% set n = entry_list | length %}
+{% if n > 0 %}
+<h2 class="mt-5">{{title}}</h2>
+<ul class="mt-4 list-group">
+    {% for entry in entry_list %}
+        <li class="list-group-item">
+            {% set data = entry.tags %}
+            {% set authors = data.author %}{% include "partials/authors.html" %}
+            ({{ data.year }})
+            <span style="text-decoration: underline;">{{ data.title }}</span>.
+            <i>{{ data.booktitle }}</i>
+            {% if data.note %}
+            ({{ data.note }})
+            {% endif %}
+            {% if data.doi %}
+                <a href="https://doi.org/{{ data.doi }}">{{data.doi}}</a>
+            {% endif %}
+            <br>
+            {% if data.abstract %}
+                {% set dt_id = "content." ~ entry.citation_key %}
+                [<a class="link" type="button" data-bs-toggle="collapse" data-bs-target="#{{dt_id}}" aria-expanded="false" aria-controls="{{dt_id}}">abstract</a>]
+            {% endif %}
+            {% if data.pdf %}
+                [<a href="{{data.pdf}}">paper</a>]
+            {% endif %}
+            {% if data.abstract %}
+                {% set dt_id = "content." ~ entry.citation_key %}
+                <div class="collapse" id="{{dt_id}}">
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <p style="text-align: justify">{{ data.abstract }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+    {% endif %}
+</ul>
